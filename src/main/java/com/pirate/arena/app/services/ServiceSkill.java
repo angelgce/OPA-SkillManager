@@ -37,7 +37,7 @@ public class ServiceSkill extends ServiceValidateRequest implements IServiceSkil
                 .withList("classes", skill.getClasses())
                 .withString("cooldown", skill.getCooldown())
                 .withList("skillSet", mapSetSkills(skill.getSkillSet()))
-                .withBoolean("isLocked", true);
+                .withBoolean("isUnlocked", false);
         serviceQueries.putItem("skills", item);
         return "success";
     }

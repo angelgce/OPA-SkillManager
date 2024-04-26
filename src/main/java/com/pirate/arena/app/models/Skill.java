@@ -26,12 +26,12 @@ public class Skill {
     private String cooldown;
 
     @DynamoDBAttribute
-    private boolean isLocked;
+    private boolean isUnlocked;
 
     public Skill() {
     }
 
-    public Skill(String id, String name, String description, String image, List<String> charactersLinked, List<SkillSet> skillSet, List<String> classes, String cooldown, boolean isLocked) {
+    public Skill(String id, String name, String description, String image, List<String> charactersLinked, List<SkillSet> skillSet, List<String> classes, String cooldown, boolean isUnlocked) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -40,7 +40,7 @@ public class Skill {
         this.skillSet = skillSet;
         this.classes = classes;
         this.cooldown = cooldown;
-        this.isLocked = isLocked;
+        this.isUnlocked = isUnlocked;
     }
 
     public String getId() {
@@ -107,11 +107,11 @@ public class Skill {
         this.cooldown = cooldown;
     }
 
-    public boolean isLocked() {
-        return isLocked;
+    public boolean isUnlocked() {
+        return isUnlocked;
     }
 
-    public void setLocked(boolean locked) {
-        isLocked = locked;
+    public void setUnlocked(boolean unlocked) {
+        isUnlocked = unlocked;
     }
 }
